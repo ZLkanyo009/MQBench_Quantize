@@ -1,6 +1,6 @@
 # MQBench Quantization Aware Training with PyTorch
 
-I am using MQBench(http://mqbench.tech/) to quantize the model for deployment.
+I am using MQBench(Model Quantization Benchmark)(http://mqbench.tech/) to quantize the model for deployment.
 
 MQBench is a benchmark and framework for evluating the quantization algorithms under real world hardware deployments. 
 
