@@ -67,7 +67,6 @@ def test(epoch):
     print("============== eval ==================")
     global best_acc
     net.eval()
-    weightsdistribute(net)
     test_loss = 0
     correct = 0
     total = 0
@@ -115,12 +114,6 @@ def test(epoch):
             torch.save(state, './checkpoint/' + args.model + '_ckpt.pth')
             print('Saved in ./checkpoint/' + args.model + '_ckpt.pth')
         best_acc = acc
-
-def weightsdistribute(model):
-    print("================show every layer's weights distribute================")
-    for key, value in model.named_parameters():
-        unique, count = torch.unique(value.detach(), sorted=True, return_counts= True)
-        print(key," : " ,unique.shape)
 
 parser = argparse.ArgumentParser(description='PyTorch MQBench Quantization Aware Training')
 parser.add_argument('model', type=str,
