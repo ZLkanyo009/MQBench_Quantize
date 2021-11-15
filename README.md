@@ -6,7 +6,7 @@ MQBench is a benchmark and framework for evluating the quantization algorithms u
 
 ## Prerequisites
 - Python 3.7+
-- PyTorch 1.8.1+
+- PyTorch 1.8.1
 
 ## Install MQBench Lib
 Before run this repository, you should install MQBench:
@@ -40,7 +40,7 @@ python main.py --resume --parallel DP --BackendType Tensorrt --quantize
 python -m torch.distributed.launch main.py --local_rank 0 --parallel DDP --resume  --BackendType Tensorrt --quantize
 ```
 
-## Fp32 Accuracy
+## Accuracy
 | Model                                                | Acc.(fp32) | Acc.(tensorRT) |
 | ---------------------------------------------------- | ------ | ------ |
 | [VGG16](https://arxiv.org/abs/1409.1556)             | 79.90% ||
